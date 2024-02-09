@@ -41,11 +41,13 @@ In this tutorial, I will be breaking down the email verification Regex. This is 
 ### Greedy and Lazy Match
     Greedy and lazy match refers to how much or how little specific operators or classes attempt to match to elements within the regex. For example, the '*' and the '+' operators in regex will attempt to match as much as possible with the elements, hence earning the nickname 'greedy' match. In some scenarios, matching as little as possible can be more beneficial. This is where the lazy match comes in. Adding a ? question mark to the quantifier makes it match to as little of the string as possible. For example, if given the regex '.*\d+' to match the string 'abc123def456', it would by default greedy match to the entire string. However, if modified with the lazy match '.*?\d+' it would then only match to the first half of the string, 'abc123', because the ? matches to as little as possible. 
 ### Boundaries
-
+    Boundaries assert where a match should occur. The anchors are a type of boundary, asserting that what follows the ^ should match the beginning of the string, and what precedes the $ should match the end of the string. Other types of boundaries include word boundaries, line boundaries, and string boundaires. The word boundary matches the position between a word character and a non word character, useful for matching a whole word. For example. '\bcat\b' would match the 'cat' in 'look at that cat', but not in 'scat' or 'catalog'. Line Boundaries (^ and $ with /m flag) are when the multiline flag /m is enabled, the caret ^ and dollar sign $ also match the beginning and end of each line within the input string, rather than just the beginning and end of the entire string. String Boundary (\A and \Z) \A matches the beginning of the string, similar to ^, but \A doesn't match at the start of each line in multiline mode. \Z matches the end of the string, similar to $, but doesn't match before the final newline character (if any).
 ### Back-references
-
+    Back references call back to the capturing groups previously defined. The syntax is '\n', where 'n' is the index of the capturing group being referenced to. For example, consider the regex pattern (\w)\1, which matches a single word character followed by the same character again. Here, (\w) is a capturing group that matches any word character, and \1 is a backreference that matches the same text that was captured by the first capturing group.
 ### Look-ahead and Look-behind
 
 ## Author
+    I am a full stack web developer focused on the back end of development. I have worked on various full stack applications such as an artist/venue booking site complete with Auth and login functionality, a tech blog site for frameworks of javascript, as well as brochure pages and back end projects. I am available and currently searching for work and projects to collaborate on, I will leave my Github and linkedIn down below. Thanks for reading!
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+    https://github.com/mrent32
+    https://www.linkedin.com/in/martin-renteria-b8744029a
